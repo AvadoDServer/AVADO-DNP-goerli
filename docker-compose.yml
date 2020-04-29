@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  goerli-geth.avado.dnp.dappnode.eth:
+    image: 'goerli-geth.avado.dnp.dappnode.eth:10.4.2'
+    build: ./build
+    volumes:
+      - 'goerli:/goerli'
+    ports:
+      - '39303'
+      - 39303/udp
+      - 39304/udp
+      - '8545'
+      - '8546'
+      - '8547'
+    restart: always
+    environment:
+      - 'EXTRA_OPTS=--rpcapi eth,net,web3,txpool'
+volumes:
+  goerli: {}
