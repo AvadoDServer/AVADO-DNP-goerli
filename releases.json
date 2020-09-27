@@ -12,5 +12,12 @@
     "uploadedTo": {
       "dappnode": "Sun, 27 Sep 2020 14:35:38 GMT"
     }
+  },
+  "10.4.4": {
+    "hash": "/ipfs/QmX1NTLz4tidu8Y5UPd4mzpueaK3GWJKfzg3yphWe38UkK",
+    "type": "manifest",
+    "uploadedTo": {
+      "http://23.254.227.151:5001": "Sun, 27 Sep 2020 16:15:47 GMT"
+    }
   }
 }
