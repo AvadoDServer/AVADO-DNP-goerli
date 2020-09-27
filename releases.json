@@ -5,5 +5,12 @@
     "uploadedTo": {
       "dappnode": "Wed, 29 Apr 2020 06:05:11 GMT"
     }
+  },
+  "10.4.3": {
+    "hash": "/ipfs/QmerF7bjsgAfwXKEjmh1DayAvKKj15hJjUiuS8ea5fqggs",
+    "type": "manifest",
+    "uploadedTo": {
+      "dappnode": "Sun, 27 Sep 2020 14:35:38 GMT"
+    }
   }
 }
