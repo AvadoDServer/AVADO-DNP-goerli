@@ -1,10 +1,11 @@
 {
   "name": "goerli-geth.avado.dnp.dappnode.eth",
-  "version": "10.4.4",
-  "upstream": "1.9.21",
+  "version": "10.4.5",
+  "upstream": "1.9.24",
   "autoupdate": true,
   "description": "This package provides a Geth Ethereum client that is configured to sync the Görli Testnet. The Görli Testnet is the first proof-of-authority cross-client testnet. A testnet can be useful when developing dapps. If you’re a developer - this package can be very useful for you.",
   "type": "library",
+  "title": "Goerli Ethereum node",
   "image": {
     "volumes": [
       "goerli:/goerli"
@@ -15,9 +16,9 @@
       "39404:39304/udp"
     ],
     "restart": "always",
-    "path": "goerli-geth.avado.dnp.dappnode.eth_10.4.4.tar.xz",
-    "hash": "/ipfs/QmfQ6yCTg7Un8W6SANne8NdYCqf5mC5GbvaWECgAuz5cww",
-    "size": 17974432,
+    "path": "goerli-geth.avado.dnp.dappnode.eth_10.4.5.tar.xz",
+    "hash": "/ipfs/QmebZ6Rrc3imuLvBzfxHuXz7TJUotTZnrWVpU4g7FAsGRP",
+    "size": 18027268,
     "environment": [
       "EXTRA_OPTS=--rpcapi eth,net,web3,txpool"
     ]
