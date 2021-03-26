@@ -33,5 +33,12 @@
     "uploadedTo": {
       "dappnode": "Fri, 13 Nov 2020 20:54:56 GMT"
     }
+  },
+  "10.4.7": {
+    "hash": "/ipfs/Qmbp3VWuab6N74Vvc7Sfh3jLMTQUR24kksaVT2Z8Z5jiFG",
+    "type": "manifest",
+    "uploadedTo": {
+      "http://80.208.229.228:5001": "Fri, 26 Mar 2021 22:49:09 GMT"
+    }
   }
 }
