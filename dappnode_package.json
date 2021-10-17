@@ -20,8 +20,8 @@
     ],
     "restart": "always",
     "path": "goerli-geth.avado.dnp.dappnode.eth_10.4.17.tar.xz",
-    "hash": "/ipfs/QmZSZCjzYMG7YDTVD4RwFNLnghhAB3XrvdnvwAZwGqQ7Y2",
-    "size": 19640208,
+    "hash": "/ipfs/QmZwyQ44V14NPEG2emJRo55X4n7i1T6VgXZUj1ykxKPreA",
+    "size": 19651348,
     "environment": [
       "EXTRA_OPTS=--http.api eth,net,web3,txpool"
     ]
@@ -33,5 +33,5 @@
     "RPC endpoint (http)": "http://my.goerli-geth.avado.dnp.dappnode.eth:8545",
     "RPC endpoint (ws)": "ws://my.goerli-geth.avado.dnp.dappnode.eth:8546"
   },
-  "builddate": "2021-10-17T08:24:09.643Z"
+  "builddate": "2021-10-17T08:29:31.328Z"
 }
