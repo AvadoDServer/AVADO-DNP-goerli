@@ -1,4 +1,4 @@
-FROM ethereum/client-go:v1.10.11 as geth
+FROM ethereum/client-go:v1.10.12 as geth
 
 # Pull Geth into a second stage deploy alpine container
 FROM alpine:edge
