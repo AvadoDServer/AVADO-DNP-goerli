@@ -12,11 +12,7 @@
     ],
     "ports": [
       "39303:39303/tcp",
-      "39303:39303/udp",
-      "39404:39304/udp",
-      "8545:8545",
-      "8546:8546",
-      "8547:8547"
+      "39303:39303/udp"
     ],
     "restart": "always",
     "path": "goerli-geth.avado.dnp.dappnode.eth_10.4.23.tar.xz",
