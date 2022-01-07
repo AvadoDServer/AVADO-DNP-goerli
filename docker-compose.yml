@@ -6,9 +6,10 @@ services:
     volumes:
       - 'goerli:/goerli'
     ports:
-      - '39303:39303'
-      - '39303:39303/udp'
-      - '8545:8545'
+      - '39303:39303'       # P2P
+      - '39303:39303/udp'   # P2P
+      - '8545:8545'         # RPC
+      - '8546:8546'         # WS
     restart: always
     environment:
       - 'EXTRA_OPTS=--http.api eth,net,web3,txpool'
