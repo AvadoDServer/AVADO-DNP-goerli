@@ -1,14 +1,15 @@
 version: '3.4'
 services:
   goerli-geth.avado.dnp.dappnode.eth:
-    image: 'goerli-geth.avado.dnp.dappnode.eth:10.4.23'
+    image: 'goerli-geth.avado.dnp.dappnode.eth:10.4.24'
     build: ./build
     volumes:
       - 'goerli:/goerli'
     ports:
-      - '39303:39303'
-      - '39303:39303/udp'
-      - '8545:8545'
+      - '39303:39303'       # P2P
+      - '39303:39303/udp'   # P2P
+      - '8545:8545'         # RPC
+      - '8546:8546'         # WS
     restart: always
     environment:
       - 'EXTRA_OPTS=--http.api eth,net,web3,txpool'
