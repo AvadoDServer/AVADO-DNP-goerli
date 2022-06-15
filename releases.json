@@ -154,10 +154,17 @@
     }
   },
   "10.4.27": {
-    "hash": "/ipfs/QmSDGuqGJp7YBKK2LesP3eNdByPEVWHQUm3cRBezde8E1B",
+    "hash": "/ipfs/QmXoPpiixksLsCp4xhxB3qeCwkytQZ5xF8z8DRGV4h1tBs",
     "type": "manifest",
     "uploadedTo": {
-      "http://80.208.229.228:5001": "Wed, 25 May 2022 13:48:55 GMT"
+      "dappnode": "Wed, 25 May 2022 15:09:57 GMT"
+    }
+  },
+  "10.4.28": {
+    "hash": "/ipfs/QmcG7YQKV3X8jUyx78C1yoK6TRS8NqBuSKJVikU58otrmj",
+    "type": "manifest",
+    "uploadedTo": {
+      "http://80.208.229.228:5001": "Wed, 15 Jun 2022 14:10:46 GMT"
     }
   }
 }
