@@ -161,10 +161,17 @@
     }
   },
   "10.4.28": {
-    "hash": "/ipfs/QmcG7YQKV3X8jUyx78C1yoK6TRS8NqBuSKJVikU58otrmj",
+    "hash": "/ipfs/QmZwfx1cZPf5t6Ltr6wMU2XWDYuhXgaErhcVgPYYJ8emaN",
     "type": "manifest",
     "uploadedTo": {
-      "http://80.208.229.228:5001": "Wed, 15 Jun 2022 14:10:46 GMT"
+      "dappnode": "Wed, 15 Jun 2022 14:50:11 GMT"
+    }
+  },
+  "10.4.30": {
+    "hash": "/ipfs/Qmcte9FG3Hxu1YyjWeCooeJwUPkv8YrNFac3bZyv8i49EZ",
+    "type": "manifest",
+    "uploadedTo": {
+      "http://80.208.229.228:5001": "Sun, 31 Jul 2022 09:38:09 GMT"
     }
   }
 }
