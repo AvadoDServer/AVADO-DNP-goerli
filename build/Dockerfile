@@ -1,7 +1,7 @@
-FROM ethereum/client-go:v1.10.21 as geth
+FROM --platform=linux/amd64 ethereum/client-go:v1.10.21 as geth
 
 # Pull Geth into a second stage deploy alpine container
-FROM alpine:edge
+FROM --platform=linux/amd64 alpine:edge
 
 RUN apk add --no-cache ca-certificates
 COPY --from=geth /usr/local/bin/geth /usr/local/bin/geth
