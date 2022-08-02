@@ -8,10 +8,9 @@ if [ ! -f ${JWT_TOKEN} ]; then
     cat ${JWT_TOKEN}
 fi
 
-
 # make JWT token available via nginx
 mkdir -p /usr/share/nginx/wizard/
-cat ${JWT_TOKEN} | tail -1 > /usr/share/nginx/wizard/jwttoken
+cat ${JWT_TOKEN} | tail -1 >/usr/share/nginx/wizard/jwttoken
 chmod 644 /usr/share/nginx/wizard/jwttoken
 
 export GETH_CMD="/usr/local/bin/geth \
@@ -19,13 +18,16 @@ export GETH_CMD="/usr/local/bin/geth \
     --goerli \
     --port 39303 \
     --http \
-    --http.addr 0.0.0.0 \
-    --http.corsdomain "*" \
-    --http.vhosts "*" \
+    --http.addr=\"0.0.0.0\" \
+    --http.corsdomain=\"*\" \
+    --http.vhosts=\"*\" \
     --ws \
-    --ws.origins "*" \
-    --ws.addr 0.0.0.0 \
-    --authrpc.jwtsecret ${JWT_TOKEN} \
+    --ws.origins=\"*\" \
+    --ws.addr=\"0.0.0.0\" \
+    --authrpc.vhosts=\"*\" \
+    --authrpc.addr=\"0.0.0.0\" \
+    --authrpc.port=\"8551\" \
+    --authrpc.jwtsecret=\"${JWT_TOKEN}\" \
     ${EXTRA_OPTS}"
 
 echo "EXTRA_OPTS=${EXTRA_OPTS}"
