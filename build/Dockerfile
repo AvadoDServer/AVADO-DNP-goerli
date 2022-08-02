@@ -1,9 +1,28 @@
 FROM --platform=linux/amd64 ethereum/client-go:v1.10.21 as geth
 
-# Pull Geth into a second stage deploy alpine container
-FROM --platform=linux/amd64 alpine:edge
+RUN apk update && apk add --no-cache \
+    bash \
+    ca-certificates \
+    nginx \
+    openssl \
+    supervisor \
+    && rm -rf /var/cache/apk/* && rm -rf /tmp/*
 
-RUN apk add --no-cache ca-certificates
-COPY --from=geth /usr/local/bin/geth /usr/local/bin/geth
+# Set up nginx config
+RUN mkdir -p /etc/nginx/certs/
+WORKDIR /etc/nginx/certs/
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+RUN wget http://iso.ava.do/my.ava.do.crt && wget http://iso.ava.do/my.ava.do.key
 
-ENTRYPOINT geth --datadir /goerli --goerli --port 39303 --http --http.addr 0.0.0.0 --http.corsdomain "*" --http.vhosts "*" --ws --ws.origins "*" --ws.addr 0.0.0.0 $EXTRA_OPTS
+RUN ls -l /etc/nginx/certs/
+COPY files/nginx.conf /etc/nginx
+RUN mkdir -p /run/nginx
+
+COPY ./files/supervisord.conf /etc/supervisord.conf
+
+# Startup script
+COPY ./files/start.sh /opt/start.sh
+COPY ./files/reload-certs.sh /opt/reload-certs.sh
+RUN chmod +x /opt/start.sh /opt/reload-certs.sh
+
+ENTRYPOINT ["/opt/start.sh"]

@@ -173,5 +173,12 @@
     "uploadedTo": {
       "http://80.208.229.228:5001": "Sun, 31 Jul 2022 10:11:11 GMT"
     }
+  },
+  "10.4.31": {
+    "hash": "/ipfs/QmX9pQeFKPPTWhZ6zLBPKEoTKA7ygT26CTzdZuVFrHueRi",
+    "type": "manifest",
+    "uploadedTo": {
+      "dappnode": "Tue, 02 Aug 2022 13:16:29 GMT"
+    }
   }
 }
