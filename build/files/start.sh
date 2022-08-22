@@ -4,6 +4,7 @@
 JWT_TOKEN="/goerli/geth/jwttoken"
 if [ ! -f ${JWT_TOKEN} ]; then
     echo "Creating JWT Token"
+    mkdir -p "/goerli/geth/"
     openssl rand -hex 32 | tr -d "\n" >${JWT_TOKEN}
     cat ${JWT_TOKEN}
 fi
