@@ -38,4 +38,5 @@ echo "GETH_CMD=$GETH_CMD"
 /usr/local/bin/geth version
 
 # Start supervisor
-/usr/bin/supervisord -c /etc/supervisord.conf
+# (using exec: https://madflojo.medium.com/shutdown-signals-with-docker-entry-point-scripts-5e560f4e2d45)
+exec /usr/bin/supervisord -c /etc/supervisord.conf
