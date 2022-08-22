@@ -4,6 +4,7 @@
 JWT_TOKEN="/goerli/geth/jwttoken"
 if [ ! -f ${JWT_TOKEN} ]; then
     echo "Creating JWT Token"
+    mkdir -p "/goerli/geth/"
     openssl rand -hex 32 | tr -d "\n" >${JWT_TOKEN}
     cat ${JWT_TOKEN}
 fi
@@ -37,4 +38,5 @@ echo "GETH_CMD=$GETH_CMD"
 /usr/local/bin/geth version
 
 # Start supervisor
-/usr/bin/supervisord -c /etc/supervisord.conf
+# (using exec: https://madflojo.medium.com/shutdown-signals-with-docker-entry-point-scripts-5e560f4e2d45)
+exec /usr/bin/supervisord -c /etc/supervisord.conf
