@@ -1,9 +1,9 @@
 {
   "10.4.34": {
-    "hash": "/ipfs/QmU5XkinSCrUwWDGQBHRpAx3WtE8bC1pJgBHahdrB4GWCL",
+    "hash": "/ipfs/QmXMV53MvABcojox9vY2vX3VbvJ3mDq3n2x5xnm6GAzaKG",
     "type": "manifest",
     "uploadedTo": {
-      "dappnode": "Thu, 29 Sep 2022 14:45:06 GMT"
+      "http://80.208.229.228:5001": "Fri, 07 Oct 2022 14:54:28 GMT"
     }
   }
 }
