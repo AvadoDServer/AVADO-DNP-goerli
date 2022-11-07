@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 ethereum/client-go:v1.10.25 as geth
+FROM --platform=linux/amd64 ethereum/client-go:v1.10.26 as geth
 
 RUN apk update && apk add --no-cache \
     bash \
@@ -11,7 +11,7 @@ RUN apk update && apk add --no-cache \
 # Set up nginx config
 RUN mkdir -p /etc/nginx/certs/
 WORKDIR /etc/nginx/certs/
-ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN wget http://iso.ava.do/my.ava.do.crt && wget http://iso.ava.do/my.ava.do.key
 
 RUN ls -l /etc/nginx/certs/
