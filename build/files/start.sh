@@ -1,6 +1,7 @@
 #!/bin/bash
 
 JWT_TOKEN="/goerli/geth/jwttoken"
+mkdir -p "/goerli/geth/"
 until $(curl --silent --fail "http://dappmanager.my.ava.do/jwttoken.txt" --output "${JWT_TOKEN}"); do
   echo "Waiting for the JWT Token"
   sleep 5
